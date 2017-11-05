@@ -26,6 +26,7 @@ w.addch(food[0],food[1],'z')
 key=curses.KEY_RIGHT
 
 while True:
+    w.border(0) # wall
     next_key=w.getch()
     key=key if next_key == -1 else next_key
 
@@ -59,5 +60,6 @@ while True:
         w.addch(tail[0], tail[1], ' ')
 
     w.addch(snake[0][0], snake[0][1], '@')
+
 
 
