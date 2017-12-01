@@ -1,7 +1,7 @@
 import random
 import curses
 
-
+bonus = 1
 s=curses.initscr()
 curses.curs_set(0)
 sh, sw=s.getmaxyx()
@@ -44,9 +44,10 @@ while True:
     if key == curses.KEY_LEFT:
         new_head[1]-=1
 
-    snake.insert(0,new_head)
 
+    snake.insert(0,new_head)
     if snake[0]==food:
+        bonus += 1
         food=None
         while food is None:
             nf=[
@@ -54,7 +55,10 @@ while True:
                 random.randint(1,sw-1)
             ]
             food=nf if nf not in snake else None
-        w.addch(food[0],food[1],'z')
+        if bonus%5 == 0: 
+        	w.addch(food[0],food[1],'b')
+        else:
+        	w.addch(food[0],food[1],'z')
     else:
         tail=snake.pop()
         w.addch(tail[0], tail[1], ' ')
