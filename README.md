@@ -1,6 +1,13 @@
-# Snake-Game-in-Python2.7-
-After execution of above program ,snake game will start. 
-Run program in terminal. 
-Use python2 instead of python3 for executing file snake.py
+# Snake-Game-in-Python2.7
+A simple terminal based snake game. Move snake, fetch food.
+## How to run?
+* install python 2 
+* run -python2 snake.py- in terminal
+## Gameplay Instructions
+* Use arrow keys to control movement of snake
+* Eat the food appeared on screen
+* Try not to hit walls or make snake eat itself
+## Special instructions
+* Supports python2.7
 
 Enjoy!!!
